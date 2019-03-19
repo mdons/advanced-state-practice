@@ -2,11 +2,12 @@
 Fork, clone, run yarn install, yarn start, pull request
 
 #### Do
- * Add a new class component for Reviews
+ * Add a new class component for Reviews in a file called "Reviews.js" under the components folder
  * Make sure your components extends the React component
  * Import and use this component in ProductDetail
  * This component will take a product from props
- * It will show the number of reviews followed by "review" or "reviews" depending on if there is one or more reviews
- * It will create a list of the reviews description which will inititally be hidden
- * When the word "review" is clicked show the reviews
+ * Once you send the Reviews component the product prop, put a debugger in the component somewhere so you can see what you passed in
+ * Create a list of the review descriptions that is inititally hidden
+ * Create a button with the word "reviews"
+ * When the button is clicked, show the reviews
  * When clicked again, hide the reviews
