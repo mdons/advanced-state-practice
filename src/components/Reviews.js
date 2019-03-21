@@ -25,17 +25,23 @@ export default class Reviews extends Component {
           stars.push(<span key={j} className="glyphicon glyphicon-star" />);
         }
         return (
-          <div key={i}>
+          <li className="list-group-item" key={i}>
             <div>{stars}</div>
             <div>{review.description}</div>
-          </div>
+          </li>
         );
       });
     }
     return (
       <div>
-        <button onClick={this.toggleReviews}>show reviews</button>
-        {display}
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={this.toggleReviews}
+        >
+          show reviews
+        </button>
+        <ul className="list-group">{display}</ul>
       </div>
     );
   }
