@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ProductDetail from "./components/ProductDetail";
 import Carousel from "./components/Carousel";
+import PropTypes from "prop-types";
+
 function App(props) {
-  var products = props.state.products.map(function(prod) {
+  const products = props.state.products.map(prod => {
     return <ProductDetail key={prod.id} product={prod} />;
   });
   return (
@@ -38,5 +39,9 @@ function App(props) {
     </div>
   );
 }
+
+App.propTypes = {
+  state: PropTypes.object
+};
 
 export default App;
